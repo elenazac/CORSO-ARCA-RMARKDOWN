@@ -1,0 +1,14 @@
+/* GENERAL SLIDES */
+
+h1 {
+    color: red;
+}
+
+h2 {
+    color: blue;
+}
+
+.remark-slide-content {
+    font-size: 20px;
+    line-height: 1.6;
+}

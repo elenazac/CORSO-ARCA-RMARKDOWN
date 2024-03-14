@@ -1,0 +1,74 @@
+---
+title: "ToothGrowth"
+author: "Elena Rosa Zacheo"
+subtitle: "Crescita dei denti nelle cavie in base a diversi livelli di vitamina C"
+date: "Università di Padova"
+output:
+  pdf_document: 
+  number_sections: true
+toc: true
+toc_depth: 4
+linestretch: 1.5
+geometry: margin=1in
+lang: it
+bibliography: bibliografia/SITOGRAFIA TESI.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, comment=" ")
+load("ambienteR.RData")
+```
+
+```{r}
+head(dati)
+```
+
+```{r message=FALSE, comment="NA"}
+summary(dati)
+```
+
+```{r echo=FALSE, message=FALSE, results='asis'}
+library(stargazer)
+stargazer(dati, type="latex", summary = TRUE, 
+           title= "Tabella di summary", digits = 2, header=FALSE)
+m = lm(ToothGrowth$len ~ ToothGrowth$supp, data = dati)
+stargazer(m, type = "latex", summary = TRUE, title = "Risultati del modello", digits = 2, header = FALSE)
+```
+
+```{r}
+y = ToothGrowth$len
+x = ToothGrowth$supp
+mean(y)
+y[1]
+(y[1]-mean(y)/sd(y))
+```
+
+$$z_i = \frac{x_i - \bar{x} }{sd} = \frac{`r y[1] - mean(y)`}{`r sd(y)`} = r (y[1] - mean[y]))/sd(y) $$
+
+$\frac{`r round(sum(y),2)`}{`r nrow(dati)`} = `r round(round(sum(y),2)/nrow(dati), 2)`$
+
+# ***Titolo 1***
+
+# ***Titolo 2***
+
+La ***\color{red}{cavia} ***\normalcolor è un roditore erbivoro che appartiene all’ordine degli istricomorfi insieme al degu e al cincilla. Le cavie diversamente dal coniglio, partoriscono prole atta (ecco perche la gravidanza è particolarmente lunga, circa 60 gg): che nasce già provvista di pelo, in grado di alimentarsi da sola; questo non significa che i cuccioli possano essere subito tolti dalla mamma perché necessitano, come tutti i mammiferi delle cure parenterali.
+
+> Si tratta di una specie ad alto carattere sociale che richiede molta compagnia, per questo motivo in alcuni Stati, ad esempio in Svizzera, è vietato per legge detenerne un solo esemplare [@world_health_organization_international_2019]. 
+
+- I porcellini d’India [@erikson_centro_studi_spa_corso_2020 , pag. 72] devono avere a disposizione un ambiente ampio e pulito a superficie morbida, costituito ad esempio da uno spesso strato di fieno, e asciutta per evitare di causare lesioni alle zampe.[^1]
+
+![Porcellini d'india]("/Users/elenazacheo/Desktop/CORSO ARCA RMARKDOWN/immagini/porcellino-d-india-caratteristiche-alimentazione-cura-it-000.jpg")
+
+```{r, fig.cap = "Conigli", fig.align="center", out.width="75%"}
+knitr::include_graphics(path = "/Users/elenazacheo/Desktop/CORSO ARCA RMARKDOWN/immagini/coniglio-nano-ermellino-tutto-quello-che-c-e-da-sapere-it-000.jpg")
+```
+
+[^1]: ciao ciao
+ 
+   - [***\color{red}{Devono} ***\normalcolor](https://www.centroodontoiatricogrimaldi.it/blog/2023/04/quanti-sono-i-denti-la-struttura-delle-arcate-dentali/) poter scorrazzare fuori dalla gabbia.
+
+# ***Titolo 3***
+
+\newpage
+
+# Bibliografia

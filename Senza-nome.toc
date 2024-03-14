@@ -1,0 +1,4 @@
+\babel@toc {italian}{}\relax 
+\contentsline {section}{\textbf {\emph {Titolo 1}}}{1}{section*.2}%
+\contentsline {section}{\textbf {\emph {Titolo 2}}}{1}{section*.3}%
+\contentsline {section}{\textbf {\emph {Titolo 3}}}{2}{section*.4}%

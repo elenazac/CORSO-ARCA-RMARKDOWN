@@ -1,0 +1,34 @@
+---
+title: "HELLO"
+author: "Elena Rosa Zacheo"
+date: "Università di Padova"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, comment=" ")
+load("ambienteR.RData")
+```
+
+
+```{r plot-interactive, echo=FALSE, eval=knitr::is_html_output()}
+library(ggplot2)
+grafico = ggplot(dati, 
+       aes(y=len ,x=supp, color =supp)) + geom_point() + 
+  theme_bw() + theme(legend.position = "none") 
+plotly::ggplotly(grafico)
+grafico
+```
+
+```{r plot-static, echo=FALSE, eval=knitr::is_latex_output()}
+library(ggplot2)
+grafico = ggplot(dati, 
+       aes(y=len ,x=supp, color =supp)) + geom_point() + 
+  theme_bw() + theme(legend.position = "none") 
+grafico
+```
+
+`r knitr::asis_output(ifelse(knitr::is_html_output(), "<span style='color:red'>***parola***</span>", "\\color{red} ***Voglio una frase rossa*** \\normalcolor"))`
+

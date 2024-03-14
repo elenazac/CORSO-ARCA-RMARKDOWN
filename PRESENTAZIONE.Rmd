@@ -1,0 +1,103 @@
+---
+title: "PRESENTAZIONE"
+author: "Elena Zacheo"
+date: "2024-03-13"
+output:
+  ioslides_presentation:
+    #css: CSS.css
+    logo: "immagini/porcellino-d-india-caratteristiche-alimentazione-cura-it-000.jpg"
+  slidy_presentation: default
+widescreen: yes
+---
+<style>
+.forceBreak { -webkit-column-break-after: always; break-after:column; }
+ .myClass {font-size: 14px;}
+}
+</style>
+
+
+```{css, echo=FALSE}
+pre {
+  max-height: 700px;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 500px;
+}
+
+.scroll-100 {
+  max-height: 500px;
+  overflow-y: auto;
+  background-color: inherit;
+}
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# CONIGLIO
+
+## porcellino
+
+## ELENA {.columns-2 .build}
+
+Testo
+
+</div> 
+
+<div style="float: left; width: 50%; text-align: left;">
+CAVIE
+
+</div> 
+
+<p class="forceBreak"></p>
+
+Testo
+
+</div> 
+
+<div style="float: left; width: 50%; text-align: left;">
+DENTI
+
+</div> 
+
+```{r, fig.cap = "Conigli", fig.align="center", out.width="75%"}
+knitr::include_graphics(path = "/Users/elenazacheo/Desktop/CORSO ARCA RMARKDOWN/immagini/coniglio-nano-ermellino-tutto-quello-che-c-e-da-sapere-it-000.jpg")
+```
+
+## CODICE
+```{r, eval=FALSE, echo=TRUE}
+class.output="scroll-100"
+shiny::shinyApp(
+ ui = fluidPage(
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(inputId = "dataset", # nome dell'input per il server
+                  label = "Choose a dataset:", # nome dell'input per lo user
+                  choices = c("rock", "pressure")) # opzioni
+    ),
+
+    mainPanel(
+      plotOutput( #qui voglio un grafico 
+        "graph"   
+      )
+    ) 
+  )
+),
+
+server = function(input, output){
+  output$graph <- renderPlot({
+    if(input$dataset == "rock"){ 
+      data <- rock
+    } else {
+      data <- pressure
+    } 
+    plot(data[, c(1:2)])
+  })
+}, 
+options = list(height = 300)
+)
+```
+

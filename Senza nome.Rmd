@@ -1,0 +1,39 @@
+---
+title: "ToothGrowth"
+author: "Elena Rosa Zacheo"
+subtitle: "*Crescita dei denti nelle cavie in base a diversi livelli di vitamina C*"
+date: "Università di Padova"
+output:
+  pdf_document: 
+  number_sections: true
+toc: true
+toc_depth: 4
+linestretch: 2
+geometry: margin=2in
+lang: it
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# ***Titolo 1***
+
+# ***Titolo 2***
+
+La \color{red}{cavia}\normalcolor è un roditore erbivoro che appartiene all’ordine degli istricomorfi insieme al degu e al cincilla. Le cavie diversamente dal coniglio, partoriscono prole atta (ecco perche la gravidanza è particolarmente lunga, circa 60 gg): che nasce già provvista di pelo, in grado di alimentarsi da sola; questo non significa che i cuccioli possano essere subito tolti dalla mamma perché necessitano, come tutti i mammiferi delle cure parenterali.
+
+Si tratta di una specie ad alto carattere sociale che richiede molta compagnia, per questo motivo in alcuni Stati, ad esempio in Svizzera, è vietato per legge detenerne un solo esemplare. I porcellini d’India devono avere a disposizione un ambiente ampio e pulito a superficie morbida, costituito ad esempio da uno spesso strato di fieno, e asciutta per evitare di causare lesioni alle zampe. Devono poter scorrazzare fuori dalla gabbia.
+
+```{r cars}
+summary(cars)
+```
+
+# ***Titolo 3***
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

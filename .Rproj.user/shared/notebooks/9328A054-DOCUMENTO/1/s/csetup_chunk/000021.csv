@@ -1,0 +1,2 @@
+"0","knitr::opts_chunk$set(echo = FALSE, comment="" "")"
+"0","load(""ambienteR.RData"")"

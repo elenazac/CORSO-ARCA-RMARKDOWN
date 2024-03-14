@@ -1,0 +1,7 @@
+[1,"Installing 'stargazer' ...\n"]
+[2,"trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.2/stargazer_5.2.3.tgz'\n"]
+[2,"Content type 'application/x-gzip' length 616438 bytes (601 KB)\n=="]
+[2,"============="]
+[1,"The downloaded binary packages are in\n"]
+[1,"\t/var/folders/2t/4nrqydx545x8207blzz7qvjh0000gn/T//RtmpwZfiGI/downloaded_packages\n"]
+[2,"===================================\ndownloaded 601 KB\n\n\n\n✔ Package 'stargazer' successfully installed.\n"]
