@@ -3,7 +3,7 @@
     "path": "~/Desktop/CORSO ARCA RMARKDOWN/QUARTO.qmd",
     "project_path": "QUARTO.qmd",
     "type": "quarto_markdown",
-    "hash": "2943300684",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1710422822411.0,
@@ -13,15 +13,15 @@
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "117,23",
-        "scrollLine": "107"
+        "cursorPosition": "35,17",
+        "scrollLine": "27"
     },
     "folds": "",
-    "lastKnownWriteTime": 1710428378,
+    "lastKnownWriteTime": 1710493066,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1710428378425,
+    "last_content_update": 1710493066716,
     "read_only": false,
     "read_only_alternatives": []
 }

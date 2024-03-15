@@ -1,11 +1,11 @@
 ---
-title: "BOTTIGLIA"
-author: "Ciccio Pasticcio"
+title: "ELENA ZACHEO"
+subtitle: "Di cosa mi occupo?"
 date: today
 format:
   html:
     toc: true
-    toc-title: I miei contenuti
+    toc-title: I miei progetti
     toc-location: right
     toc-depth: 3
 theme: minty
@@ -17,7 +17,7 @@ execute:
 lang: it
 ---
 
-## Quarto
+## Sezione uno
 
 ```{r}
 #| eval: true
@@ -26,15 +26,15 @@ lang: it
 1+1
 ```
 
-## Running Code
+## Sezione due
 
-Il quadro di Pellizza da Volpedo in @fig-prima
+In genere i miei compiti sperimentali prevedono l'utilizzo di @porcellini
 
 ```{r}
 #| fig-cap: "Chunk di codice"
 #| fig-cap-location: top
 #| out-width: 50%
-#| label: fig-prima
+#| label: porcellini
 #| fig-align: right
 knitr::include_graphics("immagini/porcellino-d-india-caratteristiche-alimentazione-cura-it-000.jpg")
 ```
